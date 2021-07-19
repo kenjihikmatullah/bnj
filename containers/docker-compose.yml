@@ -1,0 +1,41 @@
+version: '3.8'
+
+services: 
+  load-balancer:
+    image: haproxy
+    ports: 
+      - '8080:80'
+    volumes: 
+      - ./load-balancer/:/usr/local/etc/haproxy
+    networks: 
+      - bnj-network
+    depends_on: 
+      - bnj-backend-1
+      - bnj-backend-2
+      - bnj-backend-3
+
+  bnj-backend-1:
+    image: bnj-backend
+    environment: 
+      APP_ID: 1
+    networks: 
+      - bnj-network
+
+  bnj-backend-2:
+    image: bnj-backend
+    environment: 
+      APP_ID: 2
+    networks: 
+      - bnj-network
+
+  bnj-backend-3:
+    image: bnj-backend
+    environment: 
+      APP_ID: 3
+    networks: 
+      - bnj-network
+
+networks: 
+  bnj-network:
+    driver: bridge
+

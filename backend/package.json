@@ -1,0 +1,25 @@
+{
+  "name": "bnj-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenjihikmatullah/bnj-backend.git"
+  },
+  "keywords": [
+    "node-js"
+  ],
+  "author": "Kenji Hikmatullah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kenjihikmatullah/bnj-backend/issues"
+  },
+  "homepage": "https://github.com/kenjihikmatullah/bnj-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
